@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RestController
 public class StoredIntController {
-    private final StoredIntService storedIntService;
+  private final StoredIntService storedIntService;
 
-    @GetMapping("/stored-int")
-    public int getStoredInt() throws IOException {
-        return storedIntService.getStoredInt();
-    }
+  @GetMapping("/stored-int")
+  public int getStoredInt() throws IOException {
+    return storedIntService.getStoredInt();
+  }
 }
