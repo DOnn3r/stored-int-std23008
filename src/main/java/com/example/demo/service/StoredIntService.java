@@ -24,7 +24,7 @@ public class StoredIntService {
 
   private void CreateAndWriteContent(File file) throws IOException {
     var random = new Random();
-    var randomNumber = random.nextInt(100);
+    var randomNumber = random.nextInt(1000);
 
     var writer = new FileWriter(file);
     writer.write(randomNumber);
