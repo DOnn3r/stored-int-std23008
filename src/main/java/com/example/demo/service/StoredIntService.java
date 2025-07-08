@@ -11,18 +11,18 @@ public class StoredIntService {
     var filePath = "/tmp/stored-int.txt";
     var file = new File(filePath);
     if (!file.exists()) {
-      CreateAndWriteContent(file);
+      CreateAndWriteFile(file);
     }
 
-    return readContent(file);
+    return readFile(file);
   }
 
-  private int readContent(File file) throws IOException {
+  private int readFile(File file) throws IOException {
     var reader = new BufferedReader(new FileReader(file));
     return reader.read();
   }
 
-  private void CreateAndWriteContent(File file) throws IOException {
+  private void CreateAndWriteFile(File file) throws IOException {
     var random = new Random();
     var randomNumber = random.nextInt(1000);
 
